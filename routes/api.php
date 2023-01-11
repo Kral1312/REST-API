@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/Kral/305379/people',[\App\Http\Controllers\people_controller::class,'index']);
-Route::get('/Kral/305379/people/{id}',[\App\Http\Controllers\people_controller::class,'show']);
-Route::post('/Kral/305379/people',[\App\Http\Controllers\people_controller::class,'store']);
-Route::put('/Kral/305379/people/{id}/{Nazwisko}',[\App\Http\Controllers\people_controller::class,'update']);
-Route::delete('/Kral/305379/people/{id}',[\App\Http\Controllers\people_controller::class,'destroy']);
+Route::get('api/Kral/305379/people',[\App\Http\Controllers\people_controller::class,'index']);
+Route::get('api/Kral/305379/people/{id}',[\App\Http\Controllers\people_controller::class,'show']);
+Route::post('api/Kral/305379/people',[\App\Http\Controllers\people_controller::class,'store']);
+Route::put('api/Kral/305379/people/{id}/{surname}',[\App\Http\Controllers\people_controller::class,'update']);
+Route::delete('api/Kral/305379/people/{id}',[\App\Http\Controllers\people_controller::class,'destroy']);

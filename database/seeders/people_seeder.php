@@ -19,12 +19,11 @@ class people_seeder extends Seeder
     {
         for($i=0;$i<50;$i++){
             DB::table('people')->insert([
-                'Imie'=> Str::random(10),
-                'Nazwisko'=> Str::random(10),
-                'Adres'=> Str::random(10),
-                'Ulica'=> Str::random(10),
-                'Kraj'=> Str::random(10),
-                'Nr_telefonu'=>rand(100000000,999999999)
+                'name'=> Str::random(10),
+                'surname'=> Str::random(10),
+                'street'=> Str::random(10),
+                'country'=> Str::random(10),
+                'phone_number'=>rand(100000000,999999999)
             ]);
         }
     }

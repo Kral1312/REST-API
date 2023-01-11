@@ -52,13 +52,13 @@ class people_controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\people  $people
      * @param int $id
-     * @param string $Nazwisko
+     * @param string $surname
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, people $people,int $id, string $Nazwisko)
+    public function update(Request $request, people $people,int $id, string $surname)
     {
         $people=people::find($id);
-        $people->update(['Nazwisko'=>$Nazwisko]);
+        $people->update(['surname'=>$surname]);
         return response($people,200);
     }
 

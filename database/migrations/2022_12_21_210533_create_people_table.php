@@ -15,12 +15,11 @@ return new class extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->string('Imie');
-            $table->string('Nazwisko');
-            $table->string('Adres');
-            $table->string('Ulica');
-            $table->string('kraj');
-            $table->integer('Nr_telefonu');
+            $table->string('name');
+            $table->string('surname');
+            $table->string('street');
+            $table->string('country');
+            $table->integer('phone_number');
             $table->timestamps();
         });
     }
